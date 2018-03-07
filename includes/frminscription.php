@@ -19,8 +19,8 @@
 <div>
     <input type="reset" value="Effacer" />
     <input type="submit" value="Envoyer" />
-    <input type="hidden" name="frmInscription"/>
-    <!--   <input type="hidden" value="42" name="frmInscription"/>    champ caché permet de passer des valeurs -->
+    <input type="hidden" name="frmInscription" />
+    <!--   <input type="hidden" value="42" name="frmInscription"/>    champ caché permet de passer des valeurs pour éviter la récursivité -->
 
 </div>
 

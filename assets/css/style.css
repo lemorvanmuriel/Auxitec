@@ -1,0 +1,55 @@
+@import url("reset.css");
+body{
+    background-color: white;
+}
+li{
+    list-style: none;
+}
+header{
+    height:60px;
+    background-color: aquamarine;
+}
+footer{
+    height: 40px;
+    line-height: 40px;  /* centré verticalement uniquement pour une seule ligne */
+    background-color: aqua;
+    clear: left; /* si on ne met pas cette ligne le boutons sont dans le footer */
+
+}
+footer p{
+    text-align: center;  /* text-align uniquement sur bloc ou line*/
+}
+
+/*footer>p{   // enfants direct si p dans div non pris en compte
+
+}*/
+
+
+div#container{
+    width: 800px;
+    min-height: 600px;
+    border-left: 1px solid #000000;  /* taille ligne couleur*/
+    border-right: 1px solid #000000;
+    background-color: #CCC;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+form label{
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 0 20px 0 0;
+}
+
+form input[type="reset"]{
+    float: left;
+    width: 80px;
+    margin: 0 0 0 40px;
+}
+
+form input[type="submit"]{
+    float: left;
+    width: 80px;
+    margin: 0 0 0 10px;
+}
