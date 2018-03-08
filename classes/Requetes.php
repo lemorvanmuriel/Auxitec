@@ -16,7 +16,7 @@ class Requetes
     function __construct()
     {
         try{
-            $this -> db= new PDO($this->dsn, $this -> password);
+            $this -> db= new PDO($this->dsn,$this->user,$this -> password);
             $this -> db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ); // retourne un enregistrement sous forme objet
         }
         catch (PDOException $e){

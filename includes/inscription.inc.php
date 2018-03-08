@@ -28,6 +28,19 @@ if (isset($_POST['frmInscription']))
     }
     else{
         // insertion en BDD
+        $requete = new Requetes();
+        $password=sha1($mdp);
+        $sql = "INSERT INTO t_users (usernom,userprenom,usermail,userpassword,id_groupes)
+                VALUES ('$nom','$prenom','$mail','$mdp',1)";
+        //die($sql);
+        if ($requete -> insert($sql))
+        {
+            echo "<p>Inscription OK</p>";
+        }
+        else{
+            Log::logWrite("Erreur inscription");
+            echo "<p>Try again</p>";
+        }
     }
 
 }

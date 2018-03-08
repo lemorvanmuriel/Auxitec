@@ -1,3 +1,10 @@
+<?php
+include "./functions/classAutoLoader.php";
+spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'instanciation d'un objet d'une classe
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr-FR">
     <head>
