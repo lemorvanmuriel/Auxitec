@@ -35,6 +35,25 @@ if (isset($_POST['frmInscription']))
         //die($sql);
         if ($requete -> insert($sql))
         {
+           // ini_set('SMTP','localhost'); // pour que la commande mail fonctionne
+            //ini_set('smtp_port',1025);
+            //mail('contact@test.fr','Weed','Ceci est un message','From: info@societe.com');
+            $lastId= $requete->getLastId();
+            $lastId=hash('sha256',$lastId);
+            $message="<h1>Confirmation mail</h1>";
+            $message.="<p>Pour confirmer votre compte, cliquer ";
+            $message.="<a href='http://localhost/auxitec2/index.php?";
+            $message.="page=validationInscription&amp;mail=";
+            $message.=$mail;
+            $message.="&amp;id=";
+            $message.=$lastId;
+            $message.="' "; // fin du 'http
+            $message.="target='_blank'>ici</a></p>";
+
+            ini_set('SMTP','localhost'); // pour que la commande mail fonctionne
+            ini_set('smtp_port',1025);
+
+            mail($mail,'Confirmation compte',$message);
             echo "<p>Inscription OK</p>";
         }
         else{

@@ -34,6 +34,9 @@ class Requetes
         return $this -> db -> query($sql);
     }
 
+    function  getLastId(){
+        return $this -> db -> lastInsertId();
+    }
 
     function __destruct()
     {
