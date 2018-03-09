@@ -39,7 +39,7 @@ if (isset($_POST['frmInscription']))
             //ini_set('smtp_port',1025);
             //mail('contact@test.fr','Weed','Ceci est un message','From: info@societe.com');
             $lastId= $requete->getLastId();
-            $lastId=hash('sha256',$lastId);
+            $lastId=hash('sha256',$lastId); //php
             $message="<h1>Confirmation mail</h1>";
             $message.="<p>Pour confirmer votre compte, cliquer ";
             $message.="<a href='http://localhost/auxitec2/index.php?";

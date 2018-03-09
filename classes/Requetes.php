@@ -26,7 +26,7 @@ class Requetes
 
     function insert($sql)
     {
-        return $this -> db -> exec($sql); // exec pour insert et delete
+        return $this -> db -> exec($sql); // exec pour insert et delete et update
     }
 
     function select($sql)
@@ -37,6 +37,11 @@ class Requetes
     function  getLastId(){
         return $this -> db -> lastInsertId();
     }
+
+    function update($sql){
+        return $this -> db-> exec($sql);
+    }
+
 
     function __destruct()
     {

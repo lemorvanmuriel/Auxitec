@@ -13,7 +13,7 @@
 </div>
 <div>
     <label for="mdp">Mot de passe: </label>
-    <input type="pasword" name="mdp" />
+    <input type="password" name="mdp" />
 </div>
 
 <div>
