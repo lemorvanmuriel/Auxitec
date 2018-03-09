@@ -29,7 +29,7 @@ if (isset($_POST['frmInscription']))
     else{
         // insertion en BDD
         $requete = new Requetes();
-        $password=sha1($mdp);
+        $mdp=sha1($mdp);
         $sql = "INSERT INTO t_users (usernom,userprenom,usermail,userpassword,id_groupes)
                 VALUES ('$nom','$prenom','$mail','$mdp',1)";
         //die($sql);
@@ -49,7 +49,7 @@ if (isset($_POST['frmInscription']))
             $message.=$lastId;
             $message.="' "; // fin du 'http
             $message.="target='_blank'>ici</a></p>";
-
+//http://localhost/auxitec2/index.php?page=validationInscription&mail=b@test&id=3e1e967e9b793e908f8eae83c74dba9bcccce6a5535b4b462bd9994537bfe15c
             ini_set('SMTP','localhost'); // pour que la commande mail fonctionne
             ini_set('smtp_port',1025);
 

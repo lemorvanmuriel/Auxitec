@@ -1,6 +1,9 @@
 <?php
 //ini_set('SMTP','localhost'); // pour que la commande mail fonctionne
 //ini_set('smtp_port',1025);
+@session_start(); // démarre une session
+//echo(session_id());
+var_dump($_SESSION);
 include "./functions/classAutoLoader.php";
 spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'instanciation d'un objet d'une classe
 ?>
@@ -10,6 +13,7 @@ spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'
         <meta charset="utf-8" />
         <title>Blog Auxitec</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <script type="text/javascript" scr="./assets/javascript/redirection.js"></script>
     </head>
     <body>
     <div id="container">
@@ -50,6 +54,7 @@ spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'
         echo "</pre>";
 */
         include "./includes/footer.php";
+        session_destroy(); // destruction de la session
     ?>
     </div>
     </body>
