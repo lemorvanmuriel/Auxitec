@@ -13,7 +13,7 @@ spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'
         <meta charset="utf-8" />
         <title>Blog Auxitec</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <script type="text/javascript" scr="./assets/javascript/redirection.js"></script>
+        <script type="text/javascript" src="./assets/javascript/redirection.js"></script>
     </head>
     <body>
     <div id="container">
@@ -54,7 +54,6 @@ spl_autoload_register('classAutoLoader'); // chargera automatiquement lors de l'
         echo "</pre>";
 */
         include "./includes/footer.php";
-        session_destroy(); // destruction de la session
     ?>
     </div>
     </body>
